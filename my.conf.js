@@ -15,6 +15,8 @@ module.exports = function(config) {
 
     // list of files / patterns to load in the browser
     files: [
+      {pattern: angularfire_test0.html, watched: false, included: false},
+      {pattern: angularfire_test0.js, watched: false, included: false},
       'karmatest/*.js'
     ],
 
@@ -33,7 +35,12 @@ module.exports = function(config) {
     // test results reporter to use
     // possible values: 'dots', 'progress'
     // available reporters: https://npmjs.org/browse/keyword/karma-reporter
-    reporters: ['progress'],
+    reporters: ['mocha'],
+
+
+    // preprocessors: {
+    //   'karmatest/*.js': ['coverage']
+    // },
 
 
     // web server port
@@ -55,7 +62,7 @@ module.exports = function(config) {
 
     // start these browsers
     // available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
-    browsers: ['Opera'],//['Opera', 'Chrome'],
+    browsers: ['PhantomJS'],//['Opera', 'Chrome'],
 
 
     // Continuous Integration mode

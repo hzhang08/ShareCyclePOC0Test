@@ -1,6 +1,14 @@
-describe("a suite", function(){
+describe("The firebase", function(){
 
-  it("contains a true", function(){
+  beforeEach(module('sharecycle0_angularfire'));
+
+  var $controller;
+
+  beforeEach(inject(function(_$controller_){
+    
+  }));
+
+  it("can read data", function(){
       expect(true).toBe(true);
   });
 
